@@ -33,13 +33,13 @@ class ToDoListViewController: UIViewController, UITableViewDelegate, UITableView
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
         
-        /**
+       
         let testItem = ToDoItem(name: "Monday", details: "Going to Mall of Africa", completionDate: Date())
         self.toDoItems.append(testItem)
         
         let testItem2 = ToDoItem(name: "Tuesday", details: "Going to Rosebank Mall", completionDate: Date())
         self.toDoItems.append(testItem2)
-        **/
+      
         //Observer that will wait to hear fom those notifications
         NotificationCenter.default.addObserver(self, selector: #selector(addNewTask(_ :)), name: NSNotification.Name.init("com.carringtons.TODOAPP.addtask"), object: nil)
         
